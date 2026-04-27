@@ -1,0 +1,2 @@
+# Railpack / Brimble: serve this directory as the site root (no Node install step).
+root: public
