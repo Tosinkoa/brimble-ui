@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light dark;
+  --bg: #0f1216;
+  --surface: #1a1f27;
+  --text: #e8eaed;
+  --muted: #9aa0a6;
+  --accent: #7c9eff;
+  --accent-hover: #a8bcff;
+  font-family: system-ui, "Segoe UI", Roboto, Ubuntu, sans-serif;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f6f9;
+    --surface: #fff;
+    --text: #1a1d21;
+    --muted: #5f6368;
+    --accent: #1a56e8;
+    --accent-hover: #1248c4;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.site-header {
+  padding: 2.5rem 1.5rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0 auto;
+  max-width: 36ch;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+main {
+  padding: 2rem 1rem 3rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--text) 6%, transparent);
+}
+
+#message {
+  margin: 0 0 1rem;
+}
+
+#message code {
+  font-size: 0.9em;
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--text) 8%, transparent);
+}
+
+button {
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
