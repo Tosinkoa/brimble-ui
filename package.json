@@ -1,6 +1,7 @@
 {
   "name": "brimble-ui",
   "private": true,
+  "packageManager": "npm@10.8.2",
   "scripts": {
     "start": "serve public -l tcp://0.0.0.0:${PORT:-3000}"
   },
